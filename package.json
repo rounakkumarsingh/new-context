@@ -1,20 +1,33 @@
 {
-	"name": "new-context",
-	"module": "index.ts",
-	"version": "1.0.0",
-	"type": "module",
-	"devDependencies": {
-		"@types/bun": "latest",
-		"@types/react": "^19.0.12"
-	},
-	"peerDependencies": {
-		"react": "^19.0.0",
-		"typescript": "^5.0.0"
-	},
-	"bin": "./index.ts",
-	"dependencies": {
-		"chalk": "^5.4.1",
-		"commander": "^13.1.0",
-		"prettier": "^3.5.3"
-	}
+  "name": "new-context",
+  "module": "index.ts",
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://github.com/rounakkumarsingh/new-context",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rounakkumarsingh/new-context"
+  },
+  "main": "./index.ts",
+  "author": {
+    "email": "rounak.official.2@gmail.com",
+    "name": "Rounak Kumar Singh",
+    "url": "https://rounakkumarsingh.me"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.0.12"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "bin": {
+    "new-context": "./index.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "prettier": "^3.5.3"
+  }
 }
