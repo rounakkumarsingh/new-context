@@ -1,11 +1,11 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 import fs from "node:fs";
 import path from "node:path";
 
 import { program } from "commander";
 
-import { version } from "./package.json";
+import { version } from "./package.json" assert { type: "json" };
 import {
 	buildPrettifier,
 	createParentDirectoryIfNecessary,
@@ -14,12 +14,12 @@ import {
 	logError,
 	logIntro,
 	logItemCompletion,
-} from "./helper";
+} from "./helper.ts";
 import {
 	mkdirPromise,
 	readFilePromiseRelative,
 	writeFilePromise,
-} from "./utils";
+} from "./utils.ts";
 
 const config = getConfig();
 let prettify: (text: string) => Promise<string>;
@@ -58,9 +58,9 @@ const initialize = async () => {
 	const indexPath = `${contextDir}/index.${indexExtension}`;
 
 	const indexTemplate = await prettify(`\
-		export { default as ${contextName} } from './${contextName}';
-		export { default } from './${`${contextName.split("Context")[0]}Provider`}';
-		`);
+        export { default as ${contextName} } from './${contextName}';
+        export { default } from './${`${contextName.split("Context")[0]}Provider`}';
+        `);
 	logIntro({
 		name: contextName,
 		dir: contextDir,

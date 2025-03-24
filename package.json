@@ -1,12 +1,15 @@
 {
 	"name": "new-context",
 	"module": "index.ts",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"type": "module",
 	"homepage": "https://github.com/rounakkumarsingh/new-context",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/rounakkumarsingh/new-context"
+	},
+	"scripts": {
+		"build": "bun build index.ts --outdir dist"
 	},
 	"main": "./index.ts",
 	"author": {
@@ -23,7 +26,7 @@
 		"typescript": "^5.0.0"
 	},
 	"bin": {
-		"new-context": "./dist/index.js"
+		"new-context": "dist/index.js"
 	},
 	"dependencies": {
 		"chalk": "^5.4.1",
